@@ -1,0 +1,6 @@
+framework module Pods_flowOfTheDayTests {
+  umbrella header "Pods-flowOfTheDayTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

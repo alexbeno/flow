@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FuturaStd-CondensedBold.otf">
+            <string>FuturaStd-CondensedBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="mainHeader" customModule="flowOfTheDay" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="YwD-tY-O4R"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLOW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGn-aQ-GP1">
+                    <rect key="frame" x="152" y="54" width="71" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="71" id="Ghf-Ih-qPc"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="M2K-iK-9jl"/>
+                        <constraint firstAttribute="width" secondItem="JGn-aQ-GP1" secondAttribute="height" multiplier="13:6" constant="14.666666666666671" id="bC0-hM-7oe"/>
+                        <constraint firstAttribute="width" secondItem="JGn-aQ-GP1" secondAttribute="height" multiplier="71:24" constant="-5.9166666666666714" id="rRc-oM-Upm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="FuturaStd-CondensedBold" family="Futura Std" pointSize="30"/>
+                    <color key="textColor" name="white"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Src-yN-PWG">
+                    <rect key="frame" x="339" y="58" width="16" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Src-yN-PWG" secondAttribute="height" multiplier="8:11" id="nZP-gu-n2f"/>
+                        <constraint firstAttribute="width" constant="16" id="pS5-xR-XDW"/>
+                    </constraints>
+                    <state key="normal" image="search"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="black"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Src-yN-PWG" secondAttribute="trailing" constant="20" id="1GO-sC-yyv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Src-yN-PWG" secondAttribute="bottom" constant="20" id="9m8-dP-gdP"/>
+                <constraint firstItem="JGn-aQ-GP1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Qx3-gQ-FYb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="JGn-aQ-GP1" secondAttribute="bottom" constant="20" id="Skl-6w-sCk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="JGn-aQ-GP1" secondAttribute="bottom" constant="20" id="bBj-N1-yWA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="30.5" y="-235"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="search" width="16" height="16"/>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="tabBarView" customModule="flowOfTheDay" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="yuR-Ta-e6d"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRs-Na-baG">
+                    <rect key="frame" x="176" y="14" width="23" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="23" id="LCB-1O-Rpb"/>
+                        <constraint firstAttribute="width" secondItem="jRs-Na-baG" secondAttribute="height" multiplier="1:1" id="zpy-tc-pOB"/>
+                    </constraints>
+                    <state key="normal" image="more"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zk5-wa-t7Y">
+                    <rect key="frame" x="81" y="14" width="23" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="23" id="C1r-gT-FmB"/>
+                        <constraint firstAttribute="width" secondItem="zk5-wa-t7Y" secondAttribute="height" multiplier="23:22" id="ug8-9R-QPp"/>
+                    </constraints>
+                    <state key="normal" image="homeActive"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hC-dZ-hoq">
+                    <rect key="frame" x="271" y="14" width="23" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="23" id="BEt-dI-Isc"/>
+                        <constraint firstAttribute="width" secondItem="3hC-dZ-hoq" secondAttribute="height" multiplier="1:1" id="kVk-NH-CfQ"/>
+                    </constraints>
+                    <state key="normal" image="profileActive"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="black"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3hC-dZ-hoq" secondAttribute="trailing" constant="81" id="T19-e0-awn"/>
+                <constraint firstItem="jRs-Na-baG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Uxn-pV-xbS"/>
+                <constraint firstItem="zk5-wa-t7Y" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="XI2-7Y-iRm"/>
+                <constraint firstItem="jRs-Na-baG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="en7-Uz-f41"/>
+                <constraint firstItem="3hC-dZ-hoq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jFj-2R-t8V"/>
+                <constraint firstItem="zk5-wa-t7Y" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="81" id="y9x-t1-sjH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="-254.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="homeActive" width="23" height="22"/>
+        <image name="more" width="23" height="23"/>
+        <image name="profileActive" width="22" height="22"/>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
