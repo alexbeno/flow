@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B1580CAED5549939AC4D105 /* Pods_flowOfTheDayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5F1EB4F80D85F1DDF17E1D /* Pods_flowOfTheDayUITests.framework */; };
-		8C18A6B920BCA9B600C3DB35 /* addSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18A6B820BCA9B600C3DB35 /* addSearchTableViewCell.swift */; };
-		8C18A6BB20BCAAC300C3DB35 /* addSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18A6BA20BCAAC300C3DB35 /* addSearchTableViewController.swift */; };
+		8C1B940B20C149A600126DCB /* addStepTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B940A20C149A600126DCB /* addStepTagCollectionViewCell.swift */; };
 		8C35480820BB613700C621ED /* ProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C35480920BB613700C621ED /* ProgressHUD.framework */; };
 		8C5DF3BB20B9B10F00ECE656 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C07DD8620B9AF7C00AEC00F /* GoogleService-Info.plist */; };
 		8C5DF3C120B9B90F00ECE656 /* EnterAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5DF3C020B9B90F00ECE656 /* EnterAppController.swift */; };
@@ -71,8 +70,7 @@
 		708A11C46FCF6CAFBF77DC80 /* Pods-flowOfTheDayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flowOfTheDayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flowOfTheDayTests/Pods-flowOfTheDayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86AD28A95B211D22FD06256D /* Pods-flowOfTheDayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flowOfTheDayUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-flowOfTheDayUITests/Pods-flowOfTheDayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8C07DD8620B9AF7C00AEC00F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8C18A6B820BCA9B600C3DB35 /* addSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addSearchTableViewCell.swift; sourceTree = "<group>"; };
-		8C18A6BA20BCAAC300C3DB35 /* addSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addSearchTableViewController.swift; sourceTree = "<group>"; };
+		8C1B940A20C149A600126DCB /* addStepTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addStepTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C35480920BB613700C621ED /* ProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5DF3C020B9B90F00ECE656 /* EnterAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAppController.swift; sourceTree = "<group>"; };
 		8C5DF3C220B9B9A500ECE656 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
@@ -216,10 +214,10 @@
 				8CAF41A320B5AED60046903C /* ViewController.swift */,
 				8C71F24720BADF0C00C5CF3B /* detailHomeViewController.swift */,
 				8CAF41A520B5AED60046903C /* Main.storyboard */,
+				8C1B940A20C149A600126DCB /* addStepTagCollectionViewCell.swift */,
 				8C74738620BEDC8C00CF1883 /* addSearchBTableViewCell.swift */,
 				8C74738420BEB24600CF1883 /* customSearchViewController.swift */,
 				8C74738820BEFE4900CF1883 /* AddTagCollectionViewCell.swift */,
-				8C18A6BA20BCAAC300C3DB35 /* addSearchTableViewController.swift */,
 				8C71F24B20BAE43F00C5CF3B /* addStepViewController.swift */,
 				8C71F24920BAE40F00C5CF3B /* addViewController.swift */,
 				8C5DF3C220B9B9A500ECE656 /* loginViewController.swift */,
@@ -231,7 +229,6 @@
 				8C5DF3C020B9B90F00ECE656 /* EnterAppController.swift */,
 				8C72429120BB543D007284CF /* profileViewController.swift */,
 				8C71F24520BADEE400C5CF3B /* searchViewController.swift */,
-				8C18A6B820BCA9B600C3DB35 /* addSearchTableViewCell.swift */,
 			);
 			path = flowOfTheDay;
 			sourceTree = "<group>";
@@ -521,15 +518,14 @@
 				8C5DF3C520B9B9BC00ECE656 /* signUpViewController.swift in Sources */,
 				8C71F24820BADF0C00C5CF3B /* detailHomeViewController.swift in Sources */,
 				8C72429220BB543D007284CF /* profileViewController.swift in Sources */,
-				8C18A6BB20BCAAC300C3DB35 /* addSearchTableViewController.swift in Sources */,
 				8CAF41A420B5AED60046903C /* ViewController.swift in Sources */,
 				8C71F24620BADEE400C5CF3B /* searchViewController.swift in Sources */,
 				8C7EBE9520B6AB3B004AF779 /* mainHeader.swift in Sources */,
 				8C5DF3C320B9B9A500ECE656 /* loginViewController.swift in Sources */,
 				8C5DF3C120B9B90F00ECE656 /* EnterAppController.swift in Sources */,
 				8C71F24C20BAE43F00C5CF3B /* addStepViewController.swift in Sources */,
+				8C1B940B20C149A600126DCB /* addStepTagCollectionViewCell.swift in Sources */,
 				8C74738520BEB24600CF1883 /* customSearchViewController.swift in Sources */,
-				8C18A6B920BCA9B600C3DB35 /* addSearchTableViewCell.swift in Sources */,
 				8C74738720BEDC8C00CF1883 /* addSearchBTableViewCell.swift in Sources */,
 				8C7EBE9A20B6B6B9004AF779 /* tabBarView.swift in Sources */,
 				8C71F24A20BAE40F00C5CF3B /* addViewController.swift in Sources */,

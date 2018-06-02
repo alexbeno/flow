@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class addViewController: UIViewController {
     
@@ -57,6 +58,7 @@ class addViewController: UIViewController {
 
 extension addViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        ProgressHUD.show("waiting..", interaction: false)
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage{
             selectedImage = image
             
@@ -64,7 +66,7 @@ extension addViewController: UIImagePickerControllerDelegate, UINavigationContro
             myVC.theImage = image
             navigationController?.pushViewController(myVC, animated: true)
         }
-        
+        ProgressHUD.showSuccess("success")
         dismiss(animated: true, completion: nil)
     }
     
