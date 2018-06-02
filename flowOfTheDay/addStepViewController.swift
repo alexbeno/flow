@@ -7,13 +7,15 @@
 //
 
 import UIKit
-
+import Firebase
+import ProgressHUD
 class addStepViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, SendTagToParent {
     
     
     var theImage: UIImage?
     var selectedTag = [String]()
     
+    @IBOutlet weak var addFlowBtnEl: UIButton!
     @IBOutlet weak var addFlowButtonEL: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var containerCollectionTagHeight: UIView!
@@ -68,5 +70,49 @@ class addStepViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             destinationVC.delegate = self
         }
+    }
+    @IBAction func postFlowBtnAction(_ sender: Any) {
+        ProgressHUD.show("waiting..", interaction: false)
+        if let profileImg =  self.theImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.1) {
+            
+            let photoId = NSUUID().uuidString
+            let storageRef = Storage.storage().reference(forURL: "gs://flowoftheday-2edf3.appspot.com").child("post_image").child(photoId)
+
+            storageRef.putData(imageData, metadata: nil, completion: { (metadata, error) in
+                if error != nil {
+                    ProgressHUD.showError(error!.localizedDescription)
+                    return
+                }
+                
+                storageRef.downloadURL { (url, error) in
+                    guard let downloadURL = url else {
+                        return
+                    }
+                    let photoUrl = downloadURL.absoluteString
+                    self.sendDataToDatabase(photoUrl: photoUrl)
+                    
+                    // return to mainScreen
+//                    self.dismiss(animated: false, completion: nil)
+                }
+                
+            })
+        } else {
+            ProgressHUD.showError("image can't be empty")
+        }
+    }
+    func sendDataToDatabase(photoUrl: String) {
+        let ref = Database.database().reference()
+        let postRef = ref.child("posts")
+        let newPostId = postRef.childByAutoId().key
+        let newPostRef = postRef.child(newPostId)
+        let userID = Auth.auth().currentUser!.uid
+        newPostRef.setValue(["user": userID, "photoUrl": photoUrl, "tags": selectedTag, "rate": 0, "day": false, "month": false, "year": false, "addDate": ServerValue.timestamp()], withCompletionBlock:  { (error, ref) in
+            if error != nil {
+                ProgressHUD.showError(error!.localizedDescription)
+                return
+            }
+            ProgressHUD.showSuccess("success")
+            self.dismiss(animated: false, completion: nil)
+        })
     }
 }

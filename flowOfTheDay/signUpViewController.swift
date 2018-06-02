@@ -103,7 +103,7 @@ class signUpViewController: UIViewController {
                     if error == nil {
                         print("#signeIn user display name change")
                     }
-                } 
+                }
                 print("#signeIn user Created !")
                 let uid = user?.user.uid
                 
@@ -111,13 +111,13 @@ class signUpViewController: UIViewController {
                 let storageRef = Storage.storage().reference(forURL: "gs://flowoftheday-2edf3.appspot.com").child("profile_image").child(uid!)
                 
                 if let profileImg =  self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.1) {
-     
+                    
                     storageRef.putData(imageData, metadata: nil, completion: { (metadata, error) in
                         if error != nil {
                             return
                         }
                         
-//                        let profileImageUrl = storageRef.downloadURL()
+                        //                        let profileImageUrl = storageRef.downloadURL()
                         ProgressHUD.showSuccess("success")
                         storageRef.downloadURL { (url, error) in
                             guard let downloadURL = url else {
