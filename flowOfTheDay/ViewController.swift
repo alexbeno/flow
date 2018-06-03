@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var newButtonEl: UIButton!
     @IBOutlet weak var hovertopBarLeft: NSLayoutConstraint!
     @IBOutlet weak var hovertopBarWidth: NSLayoutConstraint!
+    @IBOutlet weak var newContainer: UIView!
+    @IBOutlet weak var bestContainer: UIView!
     
     let colorWhite = UIColor(red:1, green:1, blue:1, alpha:1.0)
     let colorBlack = UIColor(red:0, green:0, blue:0, alpha:1.0)
@@ -43,6 +45,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
     @IBAction func bestButtonAction(_ sender: Any) {
         bestButtonEl.setTitleColor(colorBlack, for: .normal)
@@ -50,6 +53,8 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.2, animations: {
             self.hovertopBarLeft.constant = 0
             self.view.layoutIfNeeded()
+            self.newContainer.isHidden = true
+            self.bestContainer.isHidden = false
         })
     }
     
@@ -61,6 +66,8 @@ class ViewController: UIViewController {
         UIView.animate(withDuration: 0.2, animations: {
             self.hovertopBarLeft.constant = screenWidth / 2
             self.view.layoutIfNeeded()
+            self.newContainer.isHidden = false
+            self.bestContainer.isHidden = true
         })
     }
 }

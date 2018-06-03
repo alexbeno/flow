@@ -10,10 +10,14 @@
 		6B1580CAED5549939AC4D105 /* Pods_flowOfTheDayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5F1EB4F80D85F1DDF17E1D /* Pods_flowOfTheDayUITests.framework */; };
 		8C1B940B20C149A600126DCB /* addStepTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1B940A20C149A600126DCB /* addStepTagCollectionViewCell.swift */; };
 		8C35480820BB613700C621ED /* ProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C35480920BB613700C621ED /* ProgressHUD.framework */; };
+		8C3B1EC520C42F3100214698 /* postCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B1EC420C42F3100214698 /* postCellTableViewCell.swift */; };
+		8C3B1EC720C444DF00214698 /* flowOfDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B1EC620C444DF00214698 /* flowOfDayCollectionViewCell.swift */; };
 		8C5DF3BB20B9B10F00ECE656 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C07DD8620B9AF7C00AEC00F /* GoogleService-Info.plist */; };
 		8C5DF3C120B9B90F00ECE656 /* EnterAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5DF3C020B9B90F00ECE656 /* EnterAppController.swift */; };
 		8C5DF3C320B9B9A500ECE656 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5DF3C220B9B9A500ECE656 /* loginViewController.swift */; };
 		8C5DF3C520B9B9BC00ECE656 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5DF3C420B9B9BC00ECE656 /* signUpViewController.swift */; };
+		8C5FF2F520C2EEB7002759BA /* BestPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5FF2F420C2EEB7002759BA /* BestPostViewController.swift */; };
+		8C5FF2F720C2EED4002759BA /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5FF2F620C2EED4002759BA /* NewPostViewController.swift */; };
 		8C71F24620BADEE400C5CF3B /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C71F24520BADEE400C5CF3B /* searchViewController.swift */; };
 		8C71F24820BADF0C00C5CF3B /* detailHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C71F24720BADF0C00C5CF3B /* detailHomeViewController.swift */; };
 		8C71F24A20BAE40F00C5CF3B /* addViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C71F24920BAE40F00C5CF3B /* addViewController.swift */; };
@@ -72,9 +76,13 @@
 		8C07DD8620B9AF7C00AEC00F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C1B940A20C149A600126DCB /* addStepTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addStepTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C35480920BB613700C621ED /* ProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C3B1EC420C42F3100214698 /* postCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postCellTableViewCell.swift; sourceTree = "<group>"; };
+		8C3B1EC620C444DF00214698 /* flowOfDayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowOfDayCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C5DF3C020B9B90F00ECE656 /* EnterAppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterAppController.swift; sourceTree = "<group>"; };
 		8C5DF3C220B9B9A500ECE656 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		8C5DF3C420B9B9BC00ECE656 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		8C5FF2F420C2EEB7002759BA /* BestPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestPostViewController.swift; sourceTree = "<group>"; };
+		8C5FF2F620C2EED4002759BA /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		8C71F24520BADEE400C5CF3B /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		8C71F24720BADF0C00C5CF3B /* detailHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailHomeViewController.swift; sourceTree = "<group>"; };
 		8C71F24920BAE40F00C5CF3B /* addViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addViewController.swift; sourceTree = "<group>"; };
@@ -214,9 +222,13 @@
 				8CAF41A320B5AED60046903C /* ViewController.swift */,
 				8C71F24720BADF0C00C5CF3B /* detailHomeViewController.swift */,
 				8CAF41A520B5AED60046903C /* Main.storyboard */,
+				8C3B1EC420C42F3100214698 /* postCellTableViewCell.swift */,
+				8C5FF2F420C2EEB7002759BA /* BestPostViewController.swift */,
+				8C5FF2F620C2EED4002759BA /* NewPostViewController.swift */,
 				8C1B940A20C149A600126DCB /* addStepTagCollectionViewCell.swift */,
 				8C74738620BEDC8C00CF1883 /* addSearchBTableViewCell.swift */,
 				8C74738420BEB24600CF1883 /* customSearchViewController.swift */,
+				8C3B1EC620C444DF00214698 /* flowOfDayCollectionViewCell.swift */,
 				8C74738820BEFE4900CF1883 /* AddTagCollectionViewCell.swift */,
 				8C71F24B20BAE43F00C5CF3B /* addStepViewController.swift */,
 				8C71F24920BAE40F00C5CF3B /* addViewController.swift */,
@@ -516,9 +528,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C5DF3C520B9B9BC00ECE656 /* signUpViewController.swift in Sources */,
+				8C5FF2F520C2EEB7002759BA /* BestPostViewController.swift in Sources */,
+				8C3B1EC720C444DF00214698 /* flowOfDayCollectionViewCell.swift in Sources */,
 				8C71F24820BADF0C00C5CF3B /* detailHomeViewController.swift in Sources */,
 				8C72429220BB543D007284CF /* profileViewController.swift in Sources */,
 				8CAF41A420B5AED60046903C /* ViewController.swift in Sources */,
+				8C5FF2F720C2EED4002759BA /* NewPostViewController.swift in Sources */,
 				8C71F24620BADEE400C5CF3B /* searchViewController.swift in Sources */,
 				8C7EBE9520B6AB3B004AF779 /* mainHeader.swift in Sources */,
 				8C5DF3C320B9B9A500ECE656 /* loginViewController.swift in Sources */,
@@ -531,6 +546,7 @@
 				8C71F24A20BAE40F00C5CF3B /* addViewController.swift in Sources */,
 				8C74738920BEFE4900CF1883 /* AddTagCollectionViewCell.swift in Sources */,
 				8CAF41A220B5AED60046903C /* AppDelegate.swift in Sources */,
+				8C3B1EC520C42F3100214698 /* postCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
