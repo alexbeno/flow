@@ -11,7 +11,7 @@ import UIKit
 import ProgressHUD
 
 protocol SendTagToParent {
-    func loadTags(tagsArray: Array <String>)
+    func loadTags(tagsArray: Dictionary<String, Any>)
 }
 
 
@@ -40,8 +40,9 @@ class customSearchViewController: UIViewController, UITableViewDataSource, UISea
     // MARK: variable
     var tagArray = [TheTag]()
     var currentTagArray = [TheTag]()
-    var seletedTagArray = [String]()
-    var tagSender = [String]()
+    var seletedTagArray = [String: Any]()
+    var tagSender = [String: Any]()
+    var tagArrayToShow = [String]()
     var currentTag = 0
     
     override func viewDidLoad() {
@@ -177,7 +178,8 @@ class customSearchViewController: UIViewController, UITableViewDataSource, UISea
             return UICollectionViewCell()
         }
         
-        cell.tagBtnClose.setTitle(seletedTagArray[indexPath.row], for: .normal)
+        cell.tagBtnClose.setTitle(tagArrayToShow[indexPath.row], for: .normal)
+
 //        cell.tagBtnClose.addTarget(self, action: #selector(self.removeTagButton(_:)), for: .touchUpInside)
         return cell
         
@@ -315,7 +317,12 @@ extension customSearchViewController: UITableViewDelegate {
                 if let selectedTag = allSelectedTags.first {
                     if !selectedTag.TheTagSelected {
                         selectedTag.TheTagSelected = true
-                        seletedTagArray.append(text)
+//                        seletedTagArray.append(text)
+                        seletedTagArray[text] = text
+                        tagArrayToShow.removeAll()
+                        for (key,value) in seletedTagArray {
+                            tagArrayToShow.append(key)
+                        }
                         collectionView.reloadData()
                         tableView.reloadData()
                     }
@@ -341,7 +348,11 @@ extension customSearchViewController: UICollectionViewDelegate {
                 if let selectedTag = allSelectedTags.first {
                     if selectedTag.TheTagSelected {
                         selectedTag.TheTagSelected = false
-                        seletedTagArray = seletedTagArray.filter { $0 != text }
+                        seletedTagArray.removeValue(forKey: text)
+                        tagArrayToShow.removeAll()
+                        for (key,value) in seletedTagArray {
+                            tagArrayToShow.append(key)
+                        }
                         collectionView.reloadData()
                         tableView.reloadData()
                     }

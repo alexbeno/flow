@@ -72,7 +72,7 @@ class DetailsFlowViewController: UIViewController, UICollectionViewDelegate, UIC
                 let image = dict["photoUrl"] as! String
                 let numberOfLike = dict["rate"] as! Int
                 let user = dict["user"] as! String
-                let dictTag = dict["tags"] as! [String]
+                let dictTag = dict["tags"] as! [String: Any]
                 let dateFlow = dict["addDate"] as! Double
                 self.numberOfLikes = numberOfLike
                 
@@ -95,10 +95,9 @@ class DetailsFlowViewController: UIViewController, UICollectionViewDelegate, UIC
                 self.imageFlow.layer.borderColor = UIColor.clear.cgColor
                 self.imageFlow.layer.masksToBounds = true
                 
-                for singleTag in dictTag {
-                    self.tagArray.append(singleTag)
+                for (key,value) in dictTag {
+                    self.tagArray.append(key)
                     self.collectionView.reloadData()
-                    print(singleTag)
                 }
                 
                 userRef.queryOrderedByKey().queryEqual(toValue: user).observe(.childAdded, with:{ (snapshot: DataSnapshot) in

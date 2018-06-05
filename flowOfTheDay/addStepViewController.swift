@@ -13,7 +13,8 @@ class addStepViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     
     var theImage: UIImage?
-    var selectedTag = [String]()
+    var selectedTag = [String: Any]()
+    var TagToShow = [String]()
     
     @IBOutlet weak var addFlowBtnEl: UIButton!
     @IBOutlet weak var addFlowButtonEL: UIButton!
@@ -21,8 +22,12 @@ class addStepViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var containerCollectionTagHeight: UIView!
     @IBOutlet weak var containerCollectionConstant: NSLayoutConstraint!
     
-    func loadTags(tagsArray: Array <String>) {
+    func loadTags(tagsArray: Dictionary<String, Any>) {
         selectedTag = tagsArray
+        TagToShow.removeAll()
+        for (key,value) in selectedTag {
+            TagToShow.append(key)
+        }
         collectionView.reloadData()
     }
     
@@ -63,7 +68,7 @@ class addStepViewController: UIViewController, UICollectionViewDelegate, UIColle
             return UICollectionViewCell()
         }
         
-        cell.tagButtonSetp.setTitle(selectedTag[indexPath.row], for: .normal)
+        cell.tagButtonSetp.setTitle(TagToShow[indexPath.row], for: .normal)
         return cell
         
     }
