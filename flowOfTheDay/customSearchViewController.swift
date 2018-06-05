@@ -294,6 +294,12 @@ class customSearchViewController: UIViewController, UITableViewDataSource, UISea
         // removed view from stack
         navigationController?.popViewController(animated: true)
     }
+    @IBAction func validateButtonPost(_ sender: Any) {
+        tagSender = seletedTagArray
+        let myVC = storyboard?.instantiateViewController(withIdentifier: "detailHomeViewController") as! detailHomeViewController
+        myVC.selectedTag = tagSender
+        navigationController?.pushViewController(myVC, animated: true)
+    }
 }
 
 extension customSearchViewController: UITableViewDelegate {
