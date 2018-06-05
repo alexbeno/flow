@@ -36,6 +36,8 @@
 		8CA8891B20B6029500D63598 /* FuturaStd-CondensedBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8CA8891A20B6029400D63598 /* FuturaStd-CondensedBold.otf */; };
 		8CA8891E20B602A300D63598 /* FuturaStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8CA8891C20B602A300D63598 /* FuturaStd-Medium.otf */; };
 		8CA8891F20B602A300D63598 /* FuturaStd-CondensedLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8CA8891D20B602A300D63598 /* FuturaStd-CondensedLight.otf */; };
+		8CAB460620C55390006AD011 /* DetailsFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB460520C55390006AD011 /* DetailsFlowViewController.swift */; };
+		8CAB460820C576D6006AD011 /* DetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB460720C576D6006AD011 /* DetailsCollectionViewCell.swift */; };
 		8CAF41A220B5AED60046903C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF41A120B5AED60046903C /* AppDelegate.swift */; };
 		8CAF41A420B5AED60046903C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF41A320B5AED60046903C /* ViewController.swift */; };
 		8CAF41A720B5AED60046903C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAF41A520B5AED60046903C /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		8CAF41AC20B5AED60046903C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CAF41AA20B5AED60046903C /* LaunchScreen.storyboard */; };
 		8CAF41B720B5AED60046903C /* flowOfTheDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF41B620B5AED60046903C /* flowOfTheDayTests.swift */; };
 		8CAF41C220B5AED60046903C /* flowOfTheDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF41C120B5AED60046903C /* flowOfTheDayUITests.swift */; };
+		8CB6552120C6F3CD001A87C1 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB6552020C6F3CD001A87C1 /* Kingfisher.framework */; };
+		8CB6552320C6F8A8001A87C1 /* newPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6552220C6F8A8001A87C1 /* newPostCollectionViewCell.swift */; };
 		8CDA48D820B9ACA60097AF7E /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDA48DA20B9ACA60097AF7E /* FirebaseAuth.framework */; };
 		8CDA48D920B9ACA60097AF7E /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDA48DB20B9ACA60097AF7E /* FirebaseCore.framework */; };
 		8F6AD1051E0580D0F462C5A1 /* Pods_flowOfTheDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE902EA59913DAAC23CF9AB /* Pods_flowOfTheDay.framework */; };
@@ -101,6 +105,8 @@
 		8CA8891A20B6029400D63598 /* FuturaStd-CondensedBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-CondensedBold.otf"; sourceTree = "<group>"; };
 		8CA8891C20B602A300D63598 /* FuturaStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Medium.otf"; sourceTree = "<group>"; };
 		8CA8891D20B602A300D63598 /* FuturaStd-CondensedLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-CondensedLight.otf"; sourceTree = "<group>"; };
+		8CAB460520C55390006AD011 /* DetailsFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFlowViewController.swift; sourceTree = "<group>"; };
+		8CAB460720C576D6006AD011 /* DetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CAF419E20B5AED60046903C /* flowOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flowOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAF41A120B5AED60046903C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CAF41A320B5AED60046903C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +120,8 @@
 		8CAF41BD20B5AED60046903C /* flowOfTheDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flowOfTheDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAF41C120B5AED60046903C /* flowOfTheDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowOfTheDayUITests.swift; sourceTree = "<group>"; };
 		8CAF41C320B5AED60046903C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CB6552020C6F3CD001A87C1 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CB6552220C6F8A8001A87C1 /* newPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CDA48DA20B9ACA60097AF7E /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDA48DB20B9ACA60097AF7E /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5F1EB4F80D85F1DDF17E1D /* Pods_flowOfTheDayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flowOfTheDayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB6552120C6F3CD001A87C1 /* Kingfisher.framework in Frameworks */,
 				8C35480820BB613700C621ED /* ProgressHUD.framework in Frameworks */,
 				8C71F24F20BAF61300C5CF3B /* FirebaseStorage.framework in Frameworks */,
 				8C71F24D20BAEFAC00C5CF3B /* FirebaseDatabase.framework in Frameworks */,
@@ -157,6 +166,7 @@
 		0FFA27C83443C3866415A0A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CB6552020C6F3CD001A87C1 /* Kingfisher.framework */,
 				8C35480920BB613700C621ED /* ProgressHUD.framework */,
 				8C71F25020BAF61300C5CF3B /* FirebaseStorage.framework */,
 				8C71F24E20BAEFAC00C5CF3B /* FirebaseDatabase.framework */,
@@ -222,8 +232,11 @@
 				8CAF41A320B5AED60046903C /* ViewController.swift */,
 				8C71F24720BADF0C00C5CF3B /* detailHomeViewController.swift */,
 				8CAF41A520B5AED60046903C /* Main.storyboard */,
+				8CAB460720C576D6006AD011 /* DetailsCollectionViewCell.swift */,
+				8CAB460520C55390006AD011 /* DetailsFlowViewController.swift */,
 				8C3B1EC420C42F3100214698 /* postCellTableViewCell.swift */,
 				8C5FF2F420C2EEB7002759BA /* BestPostViewController.swift */,
+				8CB6552220C6F8A8001A87C1 /* newPostCollectionViewCell.swift */,
 				8C5FF2F620C2EED4002759BA /* NewPostViewController.swift */,
 				8C1B940A20C149A600126DCB /* addStepTagCollectionViewCell.swift */,
 				8C74738620BEDC8C00CF1883 /* addSearchBTableViewCell.swift */,
@@ -503,6 +516,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-flowOfTheDay/Pods-flowOfTheDay-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -511,6 +525,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -528,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C5DF3C520B9B9BC00ECE656 /* signUpViewController.swift in Sources */,
+				8CAB460820C576D6006AD011 /* DetailsCollectionViewCell.swift in Sources */,
 				8C5FF2F520C2EEB7002759BA /* BestPostViewController.swift in Sources */,
 				8C3B1EC720C444DF00214698 /* flowOfDayCollectionViewCell.swift in Sources */,
 				8C71F24820BADF0C00C5CF3B /* detailHomeViewController.swift in Sources */,
@@ -544,6 +560,8 @@
 				8C74738720BEDC8C00CF1883 /* addSearchBTableViewCell.swift in Sources */,
 				8C7EBE9A20B6B6B9004AF779 /* tabBarView.swift in Sources */,
 				8C71F24A20BAE40F00C5CF3B /* addViewController.swift in Sources */,
+				8CB6552320C6F8A8001A87C1 /* newPostCollectionViewCell.swift in Sources */,
+				8CAB460620C55390006AD011 /* DetailsFlowViewController.swift in Sources */,
 				8C74738920BEFE4900CF1883 /* AddTagCollectionViewCell.swift in Sources */,
 				8CAF41A220B5AED60046903C /* AppDelegate.swift in Sources */,
 				8C3B1EC520C42F3100214698 /* postCellTableViewCell.swift in Sources */,

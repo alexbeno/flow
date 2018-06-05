@@ -12,6 +12,7 @@ target 'flowOfTheDay' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'ProgressHUD'
+  pod 'Kingfisher', '~> 4.0'
 
   target 'flowOfTheDayTests' do
     inherit! :search_paths

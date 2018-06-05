@@ -8,6 +8,27 @@
 
 import UIKit
 import Firebase
+import ProgressHUD
+import Kingfisher
+
+
+extension Date {
+    var yesterday: Date {
+        return Calendar.current.date(byAdding: .day, value: -1, to: noon)!
+    }
+    var tomorrow: Date {
+        return Calendar.current.date(byAdding: .day, value: 1, to: noon)!
+    }
+    var noon: Date {
+        return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self)!
+    }
+    var month: Int {
+        return Calendar.current.component(.month,  from: self)
+    }
+    var isLastDayOfMonth: Bool {
+        return tomorrow.month != month
+    }
+}
 
 class BestPostViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -15,42 +36,43 @@ class BestPostViewController: UIViewController, UICollectionViewDelegate, UIColl
     var CurrentArray = [Content]()
     var test = [String]()
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var todayDate: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        setUptContent()
         setDatabase()
+        todayDate.text = self.currentTimeDate()
+        
     }
     
-    func setUptContent() {
-    
-    }
-    
-    func convertTimestamp(serverTimestamp: Double) -> String {
-        let x = serverTimestamp / 1000
-        let date = NSDate(timeIntervalSince1970: x)
+    func currentTimeDate() -> String {
+        let now = Date()
         let formatter = DateFormatter()
+        formatter.timeZone = TimeZone.current
         formatter.dateStyle = .long
         formatter.timeStyle = .medium
-        
-        return formatter.string(from: date as Date)
+        formatter.dateFormat = "dd MMMM yyyy"
+        formatter.locale = Locale(identifier: "FR-fr")
+        return formatter.string(from: now)
     }
     
     private func setDatabase() {
+        ProgressHUD.show("waiting..", interaction: false)
         Database.database().reference().child("posts").observe(.childAdded, with:{ (snapshot: DataSnapshot) in
             if let dict = snapshot.value as? [String: Any] {
-                let date = dict["addDate"] as! Double
                 let link = snapshot.key
                 let image = dict["photoUrl"] as! String
                 let numberOfLike = dict["rate"] as! Int
-                self.ContentArray.append(Content(image: image, link: link, numberOfLike: numberOfLike ))
-                self.CurrentArray = self.ContentArray
-                self.collectionView.reloadData()
-                
-                print(Date())
+                let day = dict["toShow"] as! Bool
+                if day == true {
+                    self.ContentArray.append(Content(image: image, link: link, numberOfLike: numberOfLike ))
+                    self.CurrentArray = self.ContentArray
+                    self.collectionView.reloadData()
+                }
             }
+            ProgressHUD.showSuccess("success")
         })
     }
     
@@ -70,14 +92,11 @@ class BestPostViewController: UIViewController, UICollectionViewDelegate, UIColl
         cell.layer.masksToBounds = true
         
         let url = URL(string: CurrentArray[indexPath.row].image)
-        let data = try? Data(contentsOf: url!)
-        
-        if let imageData = data {
-            let image = UIImage(data: imageData)
-            cell.postImage.image = UIImage(data: imageData)
-        }
+        let ressource = ImageResource(downloadURL: url!, cacheKey: CurrentArray[indexPath.row].link)
+        cell.postImage.kf.setImage(with: ressource)
         
         cell.postNumber.text = String( CurrentArray[indexPath.row].numberOfLike)
+        cell.postIdentifier.text = CurrentArray[indexPath.row].link
         
         return cell
     }
@@ -89,12 +108,22 @@ class BestPostViewController: UIViewController, UICollectionViewDelegate, UIColl
         return CGSize(width: collectionView.bounds.size.width/2.1, height: CGFloat(kWhateverHeightYouWant))
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? flowOfDayCollectionViewCell {
+            let id = cell.postIdentifier.text
+            let myVC = storyboard?.instantiateViewController(withIdentifier: "DetailsFlowViewController") as! DetailsFlowViewController
+            myVC.theId = id
+            navigationController?.pushViewController(myVC, animated: true)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
 }
+
 
 // MARK: TagClass
 

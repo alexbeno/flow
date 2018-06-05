@@ -12,4 +12,5 @@ class flowOfDayCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var postNumber: UILabel!
+    @IBOutlet weak var postIdentifier: UILabel!
 }

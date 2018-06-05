@@ -32,6 +32,10 @@ class addStepViewController: UIViewController, UICollectionViewDelegate, UIColle
         super.viewDidLoad()
 
         previewImage.image = theImage
+        previewImage.layer.cornerRadius = 5.0
+        previewImage.layer.borderWidth = 1.0
+        previewImage.layer.borderColor = UIColor.clear.cgColor
+        previewImage.layer.masksToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,7 +110,7 @@ class addStepViewController: UIViewController, UICollectionViewDelegate, UIColle
         let newPostId = postRef.childByAutoId().key
         let newPostRef = postRef.child(newPostId)
         let userID = Auth.auth().currentUser!.uid
-        newPostRef.setValue(["user": userID, "photoUrl": photoUrl, "tags": selectedTag, "rate": 0, "day": false, "month": false, "year": false, "addDate": ServerValue.timestamp()], withCompletionBlock:  { (error, ref) in
+        newPostRef.setValue(["user": userID, "photoUrl": photoUrl, "tags": selectedTag, "rate": 0, "day": false, "new": true, "toShow": false, "addDate": ServerValue.timestamp()], withCompletionBlock:  { (error, ref) in
             if error != nil {
                 ProgressHUD.showError(error!.localizedDescription)
                 return
