@@ -25,6 +25,7 @@ class NewPostViewController: UIViewController, UICollectionViewDelegate, UIColle
         // Do any additional setup after loading the view.
         setDatabase()
         todayDate.text = self.currentTimeDate()
+        collectionView.reloadData()
         
     }
     
@@ -41,7 +42,7 @@ class NewPostViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     private func setDatabase() {
         ProgressHUD.show("waiting..", interaction: false)
-        Database.database().reference().child("posts").observe(.childAdded, with:{ (snapshot: DataSnapshot) in
+        Database.database().reference().child("posts").queryOrdered(byChild: "addDate").observe(.childAdded, with:{ (snapshot: DataSnapshot) in
             if let dict = snapshot.value as? [String: Any] {
                 let link = snapshot.key
                 let image = dict["photoUrl"] as! String
@@ -59,6 +60,7 @@ class NewPostViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        CurrentArray.reverse()
         return ContentArray.count
     }
     
